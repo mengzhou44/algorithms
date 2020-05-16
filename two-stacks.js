@@ -11,7 +11,7 @@ class TwoStacks {
         if (!this.isEmpty1()) {
             return this.data.shift()
         }
-        return null 
+        return null
     }
     push2(item) {
         this.data.push(item)
@@ -21,7 +21,7 @@ class TwoStacks {
         if (!this.isEmpty2()) {
             return this.data.pop()
         }
-        return null 
+        return null
     }
 
     isEmpty1() {
@@ -33,18 +33,18 @@ class TwoStacks {
     }
 }
 
- let twoStacks= new TwoStacks()
- twoStacks.push1(1)
- twoStacks.push1(2)
+let twoStacks = new TwoStacks()
+twoStacks.push1(1)
+twoStacks.push1(2)
 
- twoStacks.push2(1)
- twoStacks.push2(2)
+twoStacks.push2(1)
+twoStacks.push2(2)
 
- console.log(twoStacks.pop1())
- console.log(twoStacks.pop1())
+console.log(twoStacks.pop1())
+console.log(twoStacks.pop1())
 
- console.log(twoStacks.pop2())
- console.log(twoStacks.pop2())
+console.log(twoStacks.pop2())
+console.log(twoStacks.pop2())
 
- console.log(twoStacks.isEmpty1())
- console.log(twoStacks.isEmpty2())
+console.log(twoStacks.isEmpty1())
+console.log(twoStacks.isEmpty2())
