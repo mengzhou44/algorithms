@@ -52,17 +52,6 @@ root.left.left.right = new TreeNode(8)
 root.right.left = new TreeNode(24)
 root.right.left.right = new TreeNode(26)
 
-// let visited = []
-// preorder_dfs(root, visited)
-// console.log(visited)
-
-// let visited = []
-// postorder_dfs(root, visited)
-// console.log(visited)
-
-// let visited = []
-// inorder_dfs(root, visited)
-// console.log(visited)
 
 let visited = []
 bfs(root, visited)

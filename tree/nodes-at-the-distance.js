@@ -6,20 +6,6 @@ class TreeNode {
     }
 }
 
-// function findNodesOfKDistances(root, k) {
-//     let nodes = []
-//     function dfs(root, distance = 0) {
-//         if (root === null) return
-//         if (distance === k) {
-//             nodes.push(root)
-//         }
-//         dfs(root.left, distance + 1)
-//         dfs(root.right, distance + 1)
-//     }
-//     dfs(root)
-//     return nodes
-// }
-
 function findNodesOfKDistances(root, k) {
   let nodes = []
   function dfs(root, distance) {

@@ -23,7 +23,6 @@ class ArrayQueue {
         let item = this.data[this.front]
         this.data[this.front] = 0
         this.front = (this.front + 1) % this.capacity
-
         this.count--
         return item
     }
@@ -42,6 +41,5 @@ queue.dequeue()
 queue.enqueue(3)
 queue.enqueue(4)
 queue.enqueue(6)
-
 
 console.log(queue.toString())

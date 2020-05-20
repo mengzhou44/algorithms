@@ -4,20 +4,25 @@ class Node {
         this.children = new Map()
         this.isEndOfWord = false
     }
-    hasChild(c) {
-        return this.children.has(c)
-    }
 
     addChild(c) {
         this.children.set(c, new Node(c))
     }
 
-    getChild(c) {
-        return this.children.get(c)
+    removeChild(c) {
+        this.children.delete(c)
     }
 
     getChildren() {
         return this.children.values()
+    }
+
+    hasChild(c) {
+        return this.children.has(c)
+    }
+
+    getChild(c) {
+        return this.children.get(c)
     }
 }
 
@@ -39,19 +44,16 @@ class Trie {
 
     remove(word) {
         if (word === null) return
-        let current = this.root
         for (let c of word) {
             if (!current.hasChild(c)) {
-                return
+                current.addChild(c)
             }
             current = current.getChild(c)
         }
-
-        current.isEndOfWord = false
+        current.isEndOfWord = true
     }
 
     contains(word) {
-        if (word === null) return false
         let current = this.root
         for (let c of word) {
             if (!current.hasChild(c)) {
@@ -59,13 +61,7 @@ class Trie {
             }
             current = current.getChild(c)
         }
-
         return current.isEndOfWord
-    }
-
-    contains1(word) {
-        if (word === null) return false
-        
     }
 
     traverse(current = this.root) {
@@ -74,40 +70,12 @@ class Trie {
         }
         console.log(current.val)
     }
-
-    findWords(prefix) {
-        let current = this.root
-        for (let c of prefix) {
-            current = current.getChild(c)
-            if (current === undefined) {
-                return []
-            }
-        }
-
-        let words = []
-        function dfs(node, path = prefix) {
-            if (node.isEndOfWord) {
-                words.push(path)
-            }
-            for (let child of node.getChildren()) {
-                dfs(child, path + child.val)
-            }
-        }
-
-        dfs(current)
-
-        return words
-    }
 }
 
 let trie = new Trie()
-trie.insert('car')
-trie.insert('care')
-trie.insert('careful')
-trie.insert('card')
+trie.insert('bag')
+trie.insert('bat')
 
-// console.log(trie.contains('ght'))
-// console.log(trie.contains('cat'))
+console.log(trie.contains('bag'))
 
-console.log(trie.findWords('care'))
-console.log(trie.findWords('cargo'))
+console.log(trie.contains('bags'))

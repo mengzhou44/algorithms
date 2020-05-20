@@ -9,7 +9,6 @@ function  helper(index, numbers) {
     let childIndex = largerChildIndex(index, numbers)
     
     if (childIndex === index)  {
-       console.log(numbers)
       return
     }
     swap(childIndex, index, numbers)
@@ -54,7 +53,6 @@ function rightChildIndex(index) {
 }
 
 function hasLeftChild(index, numbers) {
- 
     return leftChildIndex(index) < numbers.length
 }
 

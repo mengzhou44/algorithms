@@ -1,0 +1,23 @@
+tree  is a special graph that has no cycle 
+
+graph composed of node and edges. 
+
+two nodes are adjacent if there is edge between these two nodes 
+
+if the edge has direction, we call this graph directed graph. 
+
+graph can be used to solve some interesting problems such as gps, or the shortest path between two nodes. 
+
+topological sorting -->  finding the order  the projects or objects depending on each other. 
+
+
+edge can also have weight. Weight can measure how strong the connection is. 
+
+ 
+
+
+There are two ways to implement a grpah: 
+
+a.   Adjacency Matrix
+
+b.    Adjacency List 

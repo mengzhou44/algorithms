@@ -1,3 +1,19 @@
+// heap is a complete binary tree that satisfy the heap property 
+// max heap the root holds the max value. 
+
+
+//applications:
+
+// a. sorting 
+// b. implement Graph algorihtm (shortest path)
+// c. priority queue 
+// d find the kth largest or smallest 
+
+
+// we ususally use array to implement a heap 
+
+
+
 class Heap {
     constructor() {
         this.data = []

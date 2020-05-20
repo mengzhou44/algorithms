@@ -20,6 +20,7 @@ graph1.addNode('B')
 graph1.addNode('C')
 graph1.addEdge('A', 'B')
 graph1.addEdge('B', 'C')
+graph1.addEdge('C', 'A')
  
 
 console.log(`has cycle: ${graph1.hasCycle()}`)
