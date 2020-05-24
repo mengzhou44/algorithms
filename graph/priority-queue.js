@@ -38,7 +38,7 @@ class PriorityQueue {
     }
 
     isEmpty() {
-        return this.data.length === 0
+        return this.count === 0
     }
 }
 
