@@ -7,7 +7,7 @@ class Node {
 
 function reverse(node) {
     if (node === null) return null
-   // if (node.next === null) return node
+   
     let current = node.next
     let prev = node
     while (current) {

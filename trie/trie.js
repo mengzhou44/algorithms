@@ -63,10 +63,7 @@ class Trie {
         return current.isEndOfWord
     }
 
-    contains1(word) {
-        if (word === null) return false
-        
-    }
+  
 
     traverse(current = this.root) {
         for (let child of current.getChildren()) {

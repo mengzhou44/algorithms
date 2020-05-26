@@ -35,7 +35,7 @@ function findMinInBinaryTree(root) {
 
 function equals(root1, root2) {
     if (root1 === null && root2 === null) return true
-    if (root1.val1 == root2.val) return false
+    if (root1.val1 !== root2.val) return false
     return equals(root1.left, root2.left) && equals(root1.right, root2.right)
 }
 
